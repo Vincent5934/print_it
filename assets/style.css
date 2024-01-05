@@ -53,9 +53,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-body {
 
-}
 section {
 	margin-block: 6em;
 }
@@ -127,11 +125,23 @@ header {
 	position: absolute;
 }
 #banner .arrow_left {
+	position:absolute;
 	left: 10px;
 }
+
+.arrow_left:hover{
+	cursor: pointer;
+}
+
 #banner .arrow_right {
+	position:absolute;
 	right: 10px;
 }
+
+.arrow_right:hover{
+	cursor: pointer;
+}
+
 /* Gestion des points du carrousel */
 .dots {
 	position: absolute;
@@ -148,7 +158,7 @@ header {
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
 }
 .dot_selected {
-	background-color: #fff;
+	background-color:white;
 }
 /* Fin du code CSS pour le carousel */
 #banner p {
