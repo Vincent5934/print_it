@@ -21,6 +21,7 @@ const slides = [
 const bannerImage = document.querySelectorAll('.banner-img')
 const arrowLeft = document.querySelector('.arrow_left')
 const arrowRight = document.querySelector('.arrow_right')
+const bannerTagline = document.querySelectorAll('.titre') 
 
 // TEST EVENEMENT LEFT/RIGHT DES FLECHES
 arrowLeft.addEventListener('click', function(evenement){
@@ -33,6 +34,7 @@ arrowRight.addEventListener('click', function(evenement){
 // Compteur
 let index = 0
 bannerImage[index].src = "./assets/images/slideshow/" + slides[index].image
+bannerTagline[index].innerHTML = slides[index].tagLine
 
 
 // Fonction pour changement image
@@ -44,6 +46,7 @@ function changeImage(sens){
 	index = slides.length -1
 
 	bannerImage[0].src = "./assets/images/slideshow/" + slides[index].image
+	bannerTagline[0].innerHTML = slides[index].tagLine
 }
 
 
