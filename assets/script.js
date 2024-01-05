@@ -19,9 +19,11 @@ const slides = [
 
 // RECUPERATION DES ELEMENTS
 const bannerImage = document.querySelectorAll('.banner-img')
+const bannerTagline = document.querySelectorAll('.titre') 
+const bannerDot = document.querySelectorAll('.dot')
 const arrowLeft = document.querySelector('.arrow_left')
 const arrowRight = document.querySelector('.arrow_right')
-const bannerTagline = document.querySelectorAll('.titre') 
+
 
 // TEST EVENEMENT LEFT/RIGHT DES FLECHES
 arrowLeft.addEventListener('click', function(evenement){
@@ -47,6 +49,10 @@ function changeImage(sens){
 
 	bannerImage[0].src = "./assets/images/slideshow/" + slides[index].image
 	bannerTagline[0].innerHTML = slides[index].tagLine
+
+	bannerDot.forEach(bannerDot => bannerDot.classList.remove('dot_selected'))
+	bannerDot[index].classList.add('dot_selected')
+
 }
 
 
